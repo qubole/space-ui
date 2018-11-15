@@ -1,0 +1,46 @@
+@import "../themes/quboleDefault";
+
+%title {
+    font-size: 18px;
+    font-weight: bold;
+    color: $themePrimaryGrey;
+}
+
+%caption {
+    font-size: 16px;
+    color: $themeSecondaryGrey;
+    letter-spacing: 0.2px;
+}
+
+.fs14 {
+    font-size: 0.875rem;
+}
+
+.fs16 {
+    font-size: 1em;
+}
+
+.fs12 {
+    font-size: 0.75em;
+}
+
+.fs11 {
+    font-size: 0.6875em;
+}
+
+.fs10 {
+    font-size: 0.625em;
+}
+
+h6 {
+    color: $qu-charcoal-grey;
+}
+
+strong {
+    color: $qu-charcoal-grey;
+}
+
+.h-text-bold {
+    font-size: 18px;
+    font-weight: bold;
+}

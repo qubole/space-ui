@@ -9,9 +9,9 @@
 // Partials
 @import "../partials/color";
 // // @import "../partials/placeholder";
-// @import "../partials/margin";
-// @import "../partials/padding";
-// @import "../partials/headerOverides";
+@import "../partials/margin";
+@import "../partials/padding";
+@import "../partials/headerOverides";
 // @import "./common";
 //Theme Colors
 $themePrimaryColor: $azure;
@@ -47,54 +47,3 @@ $themeErrorColor: $qu-vermillion-red;
 $themeErrorTextColor: $qu-brown-red;
 
 $tableHeadColor: #f5f5f5;
-
-
-body {
-  -webkit-font-smoothing: antialiased; // background-color: $light;
-  background-color: $themeBackgroundThird !important;
-  font-size: 0.875rem;
-}
-
-ul {
-  @extend .removePadding;
-  @extend .removeMargin;
-}
-
-.main-content {
-  margin-top: 48px;
-}
-
-#app {
-  font-size: 12px;
-  line-height: 20px;
-}
-
-.col-fixed-48 {
-  left: 0;
-  width: 48px;
-  height: 100%;
-  position: fixed;
-  z-index: 1;
-  background-color: $themeNavBarColor;
-  border: solid 1px $themeBorderColor;
-}
-
-.col-offset-48 {
-  padding-left: 63px;
-  z-index: 0;
-}
-
-.mouse-pointer {
-  cursor: pointer;
-}
-
-h1 {
-  font-size: 2rem;
-  color: $themePrimaryGrey;
-}
-
-h2 {
-  font-size: 24px;
-  color: $themePrimaryGrey;
-  font-weight: bold;
-}

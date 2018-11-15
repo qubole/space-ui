@@ -11,9 +11,11 @@ module.exports = function (defaults) {
             plugins: ['transform-object-rest-spread']
         },
         sassOptions: {
-            nodeSass: nodeSass,
-            includePaths: ['addon']
+            includePaths: [
+                'node_modules/bootstrap/dist/css/bootstrap.css'
+            ]
         },
+        snippetSearchPaths: ['app', 'tests/dummy/app', 'addon'],
         sassLint: {
             configPath: '.sass-lint.yml',
             shouldThrowExceptions: true,
@@ -21,15 +23,13 @@ module.exports = function (defaults) {
         },
         svgJar: {
             sourceDirs: [
-                'node_modules/feather-icons/dist/icons',
                 'public/assets/images/'
             ]
         }
     });
 
-    app.import('bower_components/bootstrap/dist/css/bootstrap.css');
 
-    app.import('bower_components/bootstrap/dist/js/bootstrap.js');
+    app.import('node_modules/bootstrap/dist/js/bootstrap.min.js');
     // app.import('bower_components/lodash/lodash.js');
 
     /*

@@ -1,0 +1,43 @@
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: $qu-bluish-grey !important;
+    font-size: 0.75rem;
+}
+
+input:-moz-placeholder,
+textarea::-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: $qu-bluish-grey !important;
+    opacity: 1;
+    font-size: 0.75rem;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: $qu-bluish-grey !important;
+    opacity: 1;
+    font-size: 0.75rem;
+}
+
+input:-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: $qu-bluish-grey !important;
+    font-size: 0.75rem;
+}
+
+input::-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: $qu-bluish-grey !important;
+    font-size: 0.75rem;
+}
+
+input::placeholder,
+textarea::placeholder {
+    /* Most modern browsers support this now. */
+    color: $qu-bluish-grey !important;
+    font-size: 0.75rem;
+}

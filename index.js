@@ -1,5 +1,8 @@
 'use strict';
 
 module.exports = {
-  name: require('./package').name
+    name: 'space-ui',
+    included: function () {
+        this._super.included.apply(this, arguments);
+    }
 };

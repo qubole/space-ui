@@ -1,0 +1,37 @@
+.noTextDecoration{
+    text-decoration: none !important;
+}
+.listStyleNone{
+    list-style: none !important;
+}
+.vAlignMid{
+    vertical-align: middle !important;
+}
+.vAlignTextTop{
+    vertical-align: text-top !important;
+}
+.fs12{
+    font-size: 12px;
+}
+.dispInherit{
+    display: inherit;
+}
+.dispInlineBlock{
+    display: inline-block;
+}
+.dispInline{
+    display: inline;
+}
+.boxSizeBorderBox{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.textEllipsis{
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.inputError{
+    background-color: #fee !important;
+    border: 1px solid #b94a48 !important;
+}
