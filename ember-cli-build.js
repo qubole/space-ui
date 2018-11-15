@@ -11,11 +11,12 @@ module.exports = function (defaults) {
             plugins: ['transform-object-rest-spread']
         },
         sassOptions: {
-            includePaths: [
-                'node_modules/bootstrap/dist/css/bootstrap.css'
-            ]
+            implementation: require('node-sass')
         },
-        snippetSearchPaths: ['app', 'tests/dummy/app', 'addon'],
+        snippetSearchPaths: ['app', 'tests/dummy/app'],
+        minifyCSS: {
+            enabled: false // CSS minification w/ @import rules seems to be broken in Ember-CLI 3.3
+        },
         sassLint: {
             configPath: '.sass-lint.yml',
             shouldThrowExceptions: true,
@@ -30,6 +31,7 @@ module.exports = function (defaults) {
 
 
     app.import('node_modules/bootstrap/dist/js/bootstrap.min.js');
+    app.import('node_modules/bootstrap/dist/css/bootstrap.css');
     // app.import('bower_components/lodash/lodash.js');
 
     /*
