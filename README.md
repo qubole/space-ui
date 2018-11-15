@@ -1,51 +1,52 @@
-space-ui
-==============================================================================
+# space-ui
 
 [Short description of the addon.]
 
-Installation
-------------------------------------------------------------------------------
+## Installation
 
 ```
 ember install space-ui
 ```
 
-
-Usage
-------------------------------------------------------------------------------
+## Usage
 
 [Longer description of how to use the addon in apps.]
 
-
-Contributing
-------------------------------------------------------------------------------
+## Contributing
 
 ### Installation
 
-* `git clone <repository-url>`
-* `cd space-ui`
-* `npm install`
+- `git clone <repository-url>`
+- `cd space-ui`
+- `npm install`
+
+### Add on dev setup
+
+npm link - in space repo
+npm link space-ui - in your project repo
+
+Follow this video to setup addon dev env
+https://www.youtube.com/watch?v=bhJ6YzBIoWo
 
 ### Linting
 
-* `npm run lint:hbs`
-* `npm run lint:js`
-* `npm run lint:js -- --fix`
+- `npm run lint:hbs`
+- `npm run lint:js`
+- `npm run lint:js -- --fix`
 
 ### Running tests
 
-* `ember test` – Runs the test suite on the current Ember version
-* `ember test --server` – Runs the test suite in "watch mode"
-* `ember try:each` – Runs the test suite against multiple Ember versions
+- `ember test` – Runs the test suite on the current Ember version
+- `ember test --server` – Runs the test suite in "watch mode"
+- `ember try:each` – Runs the test suite against multiple Ember versions
 
 ### Running the dummy application
 
-* `ember serve`
-* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
+- `ember serve`
+- Visit the dummy application at [http://localhost:4200](http://localhost:4200).
 
 For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
 
-License
-------------------------------------------------------------------------------
+## License
 
 This project is licensed under the [MIT License](LICENSE.md).
