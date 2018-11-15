@@ -1,0 +1,11 @@
+{{#if actionName}}
+    <button class="btn {{className}}" {{action actionName }} disabled={{disabled}}>
+        {{yield}}
+    </button>
+{{/if}}
+
+{{#if link}}
+    {{#link-to link class=(concat "btn " className)}}
+        {{yield}}
+    {{/link-to}}
+{{/if}}
