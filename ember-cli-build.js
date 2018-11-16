@@ -5,28 +5,23 @@ const nodeSass = require('node-sass');
 
 module.exports = function (defaults) {
     let app = new EmberAddon(defaults, {
-    // Add options here
-    // Add options here
         babel: {
             plugins: ['transform-object-rest-spread']
         },
         sassOptions: {
-            implementation: require('node-sass')
+            implementation: nodeSass
         },
-        snippetSearchPaths: ['app', 'tests/dummy/app'],
-        minifyCSS: {
-            enabled: false // CSS minification w/ @import rules seems to be broken in Ember-CLI 3.3
-        },
+        // snippetSearchPaths: ['app', 'tests/dummy/app']
         sassLint: {
             configPath: '.sass-lint.yml',
             shouldThrowExceptions: true,
             shouldLog: true
-        },
-        svgJar: {
-            sourceDirs: [
-                'public/assets/images/'
-            ]
         }
+    // svgJar: {
+    //     sourceDirs: [
+    //         'public/assets/images/'
+    //     ]
+    // }
     });
 
 
