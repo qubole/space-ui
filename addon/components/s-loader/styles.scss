@@ -1,0 +1,102 @@
+& {
+
+    .s-circle,
+    .s-circle:after {
+        border-radius: 50%;
+        width: 5em;
+        height: 5em;
+    }
+
+    .s-circle {
+        // margin: 60px auto;
+        font-size: 15px;
+        position: relative;
+        text-indent: -9999em;
+        border-top: 0.5em solid rgba(255, 255, 255, 0.2);
+        border-right: 0.5em solid rgba(255, 255, 255, 0.2);
+        border-bottom: 0.5em solid rgba(255, 255, 255, 0.2);
+        border-left: 0.5em solid $themePrimaryColor;
+        -webkit-transform: translateZ(0);
+        -ms-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-animation: load8 1.1s infinite linear;
+        animation: load8 1.1s infinite linear;
+    }
+
+    .small {
+        font-size: 4px;
+    }
+
+    @-webkit-keyframes load8 {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes load8 {
+        0% {
+            -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+        }
+
+        100% {
+            -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+        }
+    }
+
+
+    .s-loader {
+        margin: 0 auto;
+        height: 4px;
+        width: 100%;
+        max-width: 300px;
+        position: relative;
+        overflow: hidden;
+        background-color: $themeTertiaryGrey;
+    }
+
+    .s-loader:before {
+        display: block;
+        position: absolute;
+        content: "";
+        left: -200px;
+        width: 200px;
+        height: 4px;
+        background-color: $themePrimaryColor;
+        animation: sloading 2s linear infinite;
+    }
+
+    @keyframes sloading {
+        from {
+            left: -200px;
+            width: 30%;
+        }
+
+        50% {
+            width: 30%;
+        }
+
+        70% {
+            width: 70%;
+        }
+
+        80% {
+            left: 50%;
+        }
+
+        95% {
+            left: 120%;
+        }
+
+        to {
+            left: 100%;
+        }
+    }
+}

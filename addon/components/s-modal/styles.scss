@@ -1,0 +1,18 @@
+& {
+  .modal-content {
+    border-radius: $radius5 !important;
+  }
+
+  .modal-lg {
+    max-width: 60vw;
+  }
+
+  .modal-header {
+    border: none;
+    background: none;
+  }
+
+  .modal-title {
+    font-size: 1rem;
+  }
+}
