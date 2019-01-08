@@ -1,0 +1,25 @@
+{{#if notification.isCloseable}}
+  <button type="button" class="close-notification" aria-label="Close" {{action 'remove' notification}}>
+      <span aria-hidden="true">&times;</span>
+  </button>
+{{/if}}
+{{#if notification.icon}}
+  <div class="col-xs-1 removePadding notification-icon {{notification.typeClass}}">
+    <i class="indicator {{notification.icon}}"></i>
+  </div>
+{{/if}}
+<div class="notification-message {{getMessageClass}}" title={{notification.message}}>
+    {{notification.message}}
+</div>
+
+{{#if notification.actions}}
+    <button class="notification-action {{notification.typeClass}}" {{action 'customAction' notification}}>
+      {{notification.actions.title}}
+    </button>
+{{/if}}
+{{#if showProgress}}
+  {{progress-bar
+    class="query-progress col-xs-6 removePadding"
+    progress=notification.progress.percentage
+  }}
+{{/if}}

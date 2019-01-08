@@ -1,0 +1,23 @@
+<div class="notifications-area">
+    {{#if isStacked}}
+        <div class="clear-all-header" onclick={{action 'clearAll'}}>Clear All</div>
+    {{/if}}
+    <div class="primary-notification {{if isFullView 'hidden'}}">
+      {{#if notifications.firstObject}}
+          {{p-notification-message notification=notifications.firstObject slideIn=slideIn remove=(action 'remove')}}
+      {{/if}}
+      {{#if isStacked}}
+        <div class="show-more-footer" onclick={{action 'showAll'}}>See {{hiddenNotificationsLength}} more</div>
+      {{/if}}
+    </div>
+  {{#if isFullView}}
+    <div class="secondary-notifications">
+      {{#each notifications as |notification|}}
+        {{p-notification-message notification=notification direction="up" willBeDestory=willBeDestory remove=(action 'remove')}}
+      {{/each}}
+    </div>
+    {{#if isStacked}}
+      <div class="show-less-footer" onclick={{action 'showLess'}}>See Less</div>
+    {{/if}}
+  {{/if}}
+</div>

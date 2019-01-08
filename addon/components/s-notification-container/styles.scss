@@ -1,0 +1,36 @@
+@import "themes/default.scss";
+.notifications-area {
+    position: absolute;
+    right: 0;
+    top: 15%;
+    width: 26%;
+    z-index: 999;
+    background-color: $themePrimaryColor;
+    .show-more-footer, .show-less-footer{
+      text-align: center;
+      color: $themeNotificationFooterColor;
+      cursor: pointer;
+      font-weight: bold;
+      width: 92px;
+      border-radius: $radius30 !important;
+      @extend .mtn6, .p5, .ml41p;
+      &:hover{
+        opactiy: 0.8;
+        background-color: $themeNotificationFooterBgColor;
+      }
+    }
+    .clear-all-header{
+      opacity: 0.5;
+      width: 76px;
+      border-radius: $radius5 !important;
+      @extend .p4, .ml76p, .mb10;
+      cursor: pointer;
+      border: 1px solid $themeNotifClearAllBorderColor;
+      background-color: $themePrimaryColor;
+      text-align: center;
+      &:hover{
+        opacity: 1;
+        background-color: $themeNotifClearAllHoverBgColor;
+      }
+    }
+  }

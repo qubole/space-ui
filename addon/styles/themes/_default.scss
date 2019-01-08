@@ -40,6 +40,7 @@ $themeSubtitleColor: $qu-bluish-grey;
 $themeSectionText: $textGray;
 //utils
 $radius5: 5px;
+$radius30: 30px;
 
 $themeWarningColor: $qu-light-tan-yellow;
 $themeWarningTextColor: $qu-dark-brown;
@@ -47,3 +48,35 @@ $themeErrorColor: $qu-vermillion-red;
 $themeErrorTextColor: $qu-brown-red;
 
 $tableHeadColor: #f5f5f5;
+
+/* SPACE UI : Alert : Danger */
+$themeDangerAlertBackgroundColor           : $qu-beige-red;
+$themeDangerAlertTextColor                 : $qu-brown-red;
+$themeDangerAlertLeftPanelColor            : transparent;
+$themeDangerAlertIconColor                 : $qu-vermillion-red;
+$themeDangerAlertBorderColor               : $qu-vermillion-red;
+
+/* SPACE UI : Alert : Warning */
+$themeWarningAlertBackgroundColor: $qu-light-tan-yellow;
+$themeWarningAlertBorderColor: $squash;
+$themeWarningAlertIconColor: $squash;
+$themeWarningAlertTextColor: $qu-dark-brown;
+
+/*SPACE UI: Alert: Info*/
+$themeInfoAlertBackgroundColor: $azure;
+$themeInfoAlertBorderColor: $azure;
+$themeInfoAlertIconColor: $azure;
+$themeInfoAlertTextColor: $white;
+
+/*SPACE UI: Alert: Success*/
+$themeSuccessAlertBackgroundColor: $qu-light-sage;
+$themeSuccessAlertBorderColor: $qu-cool-green;
+$themeSuccessAlertIconColor: $qu-cool-green;
+$themeSuccessAlertTextColor: $qu-pine-green;
+
+/*SPACE UI : notifications*/
+$themeNotificationFooterColor: $azure;
+$themeNotificationFooterBgColor:$azure-light;
+$themeNotifClearAllBorderColor: $qu-charcoal-grey;
+$themeNotifClearAllHoverBgColor: $whiteTwo;
+$themeNotifTopBorderColor: $grayShadeTwo;
