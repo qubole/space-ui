@@ -17,6 +17,12 @@ module.exports = function (defaults) {
             configPath: '.sass-lint.yml',
             shouldThrowExceptions: true,
             shouldLog: true
+        },
+        svgJar: {
+            sourceDirs: [
+                'node_modules/feather-icons/dist/icons',
+                'public/assets/images/'
+            ]
         }
     // svgJar: {
     //     sourceDirs: [

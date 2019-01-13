@@ -1,6 +1,11 @@
 import Ember from 'ember';
+import EmberObject from '@ember/object';
+import { isPresent } from '@ember/utils';
+import { later } from '@ember/runloop';
+import Service from '@ember/service';
+import { A } from '@ember/array';
 
-const notifObj = Ember.Object.extend({
+const notifObj = EmberObject.extend({
     typeClass: '',
     expired: false,
     message: '',
@@ -11,8 +16,8 @@ const notifObj = Ember.Object.extend({
     progress: null
 });
 
-export default Ember.Service.extend({
-    messages: Ember.A(),
+export default Service.extend({
+    messages: A(),
     pushMessage: function(options) {
         let notification = notifObj.create({
             typeClass: options.type,
@@ -26,10 +31,10 @@ export default Ember.Service.extend({
         Ember.Logger.info('Pushing notification to messages queue. Message: ' + notification.get('message'));
         this.messages.pushObject(notification);
         if(!notification.get('isPersistant')){
-            Ember.run.later(this, () => {
+            later(this, () => {
                 this.removeNotification(notification);
                 notification.set('expired', true);
-            }, 10000);
+            }, options.timeout || 10000);
         }
         return notification;
     },
@@ -38,7 +43,7 @@ export default Ember.Service.extend({
             return;
         }
         notification.set('expired', true);
-        Ember.run.later(this, () => {
+        later(this, () => {
             Ember.Logger.info('Removing notification from queue. Message: ' + notification.get('message'));
             this.messages.removeObject(notification);
         }, 200);
@@ -72,8 +77,8 @@ export default Ember.Service.extend({
     },
     progress(options){
         options.type = 'info';
-        options.isPersistant = Ember.isPresent(options.isPersistant) ? options.isPersistant : true;
-        options.isCloseable = Ember.isPresent(options.isCloseable) ? options.isCloseable : true;
+        options.isPersistant = isPresent(options.isPersistant) ? options.isPersistant : true;
+        options.isCloseable = isPresent(options.isCloseable) ? options.isCloseable : true;
         return this.pushMessage(options);
     }
 });

@@ -1,25 +1,19 @@
-{{#if notification.isCloseable}}
-  <button type="button" class="close-notification" aria-label="Close" {{action 'remove' notification}}>
-      <span aria-hidden="true">&times;</span>
-  </button>
-{{/if}}
 {{#if notification.icon}}
-  <div class="col-xs-1 removePadding notification-icon {{notification.typeClass}}">
-    <i class="indicator {{notification.icon}}"></i>
-  </div>
+  {{s-icon name="clock" class=(concat "col-xs-1 mt5 fs25 removePadding notification-icon " notification.typeClass)}}
 {{/if}}
 <div class="notification-message {{getMessageClass}}" title={{notification.message}}>
     {{notification.message}}
 </div>
-
 {{#if notification.actions}}
-    <button class="notification-action {{notification.typeClass}}" {{action 'customAction' notification}}>
-      {{notification.actions.title}}
-    </button>
+  {{#s-button className=(concat 'fs12 notification-action ' notification.typeClass) actionName=(action 'customAction' notification)}}
+    {{notification.actions.title}}
+  {{/s-button}}
 {{/if}}
 {{#if showProgress}}
-  {{progress-bar
-    class="query-progress col-xs-6 removePadding"
-    progress=notification.progress.percentage
-  }}
+  {{s-progress class="col-sm-8" cssClasses="query-progress" progress=notification.progress.percentage}}
+{{/if}}
+{{#if notification.isCloseable}}
+  {{#s-button className="fs21 close-notification" actionName=(action 'remove' notification)}}
+    <span aria-hidden="true">&times;</span>
+  {{/s-button}}
 {{/if}}

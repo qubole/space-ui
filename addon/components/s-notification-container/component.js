@@ -1,46 +1,51 @@
-import Ember from 'ember';
+import Component from '@ember/component';
 import layout from './template';
+import { computed } from '@ember/object';
+import {
+    inject as service
+} from '@ember/service';
+import { later } from '@ember/runloop';
 
-export default Ember.Component.extend({
-  layout,
-  notificationService: Ember.inject.service('notifications'),
-  notifications: Ember.computed.alias('notificationService.messages'),
-  isStacked: Ember.computed('notifications.[]', function(){
-      return this.get('notifications.length') > 1;
-  }),
-  isFullView: false,
-  slideIn: Ember.computed('isFullView', {
-      get(){
-          return !this.get('isFullView');
-      },
-      set(key, value){
-          return value;
-      }
-  }),
-  hiddenNotificationsLength: Ember.computed('notifications.length', function(){
-      return this.get('notifications.length') - 1 ;
-  }),
-  didInsertElement(){
-      this.set('slideIn', true);
-  },
+export default Component.extend({
+    layout,
+    notificationService: service('notifications'),
+    notifications: computed.alias('notificationService.messages'),
+    isStacked: computed('notifications.[]', function(){
+        return this.get('notifications.length') > 1;
+    }),
+    isFullView: false,
+    slideIn: computed('isFullView', {
+        get(){
+            return !this.get('isFullView');
+        },
+        set(key, value){
+            return value;
+        }
+    }),
+    hiddenNotificationsLength: computed('notifications.length', function(){
+        return this.get('notifications.length') - 1 ;
+    }),
+    didInsertElement(){
+        this.set('slideIn', true);
+    },
 
-  actions: {
-      remove(notification) {
-          this.get('notificationService').removeNotification(notification);
-      },
-      showAll(){
-          this.set('isFullView', true);
-      },
-      showLess(){
-          this.set('willBeDestory', true);
-          Ember.run.later(this, () => {
-              this.set('isFullView', false);
-              this.set('slideIn', false);
-              this.set('willBeDestory', false);
-          }, 200);
-      },
-      clearAll(){
-          this.get('notificationService').clearAll();
-      }
-  }
+    actions: {
+        remove(notification) {
+            this.get('notificationService').removeNotification(notification);
+        },
+        showAll(){
+            this.set('isFullView', true);
+        },
+        showLess(){
+            this.set('willBeDestory', true);
+            later(this, () => {
+                this.set('isFullView', false);
+                this.set('slideIn', false);
+                this.set('willBeDestory', false);
+            }, 200);
+        },
+        clearAll(){
+            this.get('notificationService').clearAll();
+        }
+    }
 });
