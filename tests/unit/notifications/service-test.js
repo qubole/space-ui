@@ -1,12 +1,12 @@
-/*import { moduleFor, test } from 'ember-qunit';
+import { module, test } from 'qunit';
 
-moduleFor('service:notifications', 'Unit | Service | notifications', {
-  // Specify the other units that are required for this test.
-  // needs: ['service:foo']
+module('service:notifications', 'Unit | Service | notifications', {
+    // Specify the other units that are required for this test.
+    // needs: ['service:foo']
 });
 
 // Replace this with your real tests.
 test('it exists', function(assert) {
-  let service = this.subject();
-  assert.ok(service);
-});*/
+    let service = this.subject();
+    assert.ok(service);
+});
