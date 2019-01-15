@@ -2,7 +2,7 @@
   {{#if isStacked}}
       <div class="clear-all-header" onclick={{action 'clearAll'}}>Clear All</div>
   {{/if}}
-  <div class="primary-notification {{if isFullView 'hidden'}}">
+  <div class="primary-notification {{if isFullView 'd-none'}}">
     {{#if notifications.firstObject}}
         {{p-notification-message notification=notifications.firstObject slideIn=slideIn remove=(action 'remove')}}
     {{/if}}

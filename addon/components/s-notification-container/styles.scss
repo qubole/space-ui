@@ -13,20 +13,17 @@
       cursor: pointer;
       font-weight: bold;
       width: 92px;
-      border-radius: $radius30 !important;
+      @include border-radius($radius30);
       @extend .mtn6, .p5, .ml41p;
       &:hover{
         opactiy: 0.8;
         background-color: $themeNotificationFooterBgColor;
       }
     }
-    .hidden{
-      display: none;
-    }
     .clear-all-header{
       opacity: 0.5;
       width: 76px;
-      border-radius: $radius5 !important;
+      @include border-radius($radius5);
       @extend .p4, .ml76p, .mb10;
       cursor: pointer;
       border: 1px solid $themeNotifClearAllBorderColor;
@@ -57,7 +54,7 @@
         box-shadow: 0 15px 24px -15px rgba(37, 38, 94, 0.1);
         background-color: $themePrimaryWhite;
         border-top: 0.5px solid $themeNotifTopBorderColor;
-        border-radius: $radius5 !important;
+        @include border-radius($radius5);
         &.slide-out{
             animation: pulses 0.2s linear;
         }
@@ -107,7 +104,7 @@
             outline: 0px;
             float: right;
             @extend .vAlignMid, .ptb5lr10;
-            border-radius: $radius5 !important;
+            @include border-radius($radius5);
             &.danger{
               background-color: $themeDangerAlertBackgroundColor;
               color: $themeDangerAlertTextColor;

@@ -1,9 +1,5 @@
 @import "partials/mixins";
 .qu-progress{
-   display: flex;
-   .progress-text{
-       display: inline-flex;
-   }
    .progress {
      flex: 1;
      @include border-radius(3px);
