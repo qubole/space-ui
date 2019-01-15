@@ -28,7 +28,6 @@ export default Service.extend({
             actions: options.actions,
             progress: options.progress
         });
-        Ember.Logger.info('Pushing notification to messages queue. Message: ' + notification.get('message'));
         this.messages.pushObject(notification);
         if(!notification.get('isPersistant')){
             later(this, () => {
@@ -44,7 +43,6 @@ export default Service.extend({
         }
         notification.set('expired', true);
         later(this, () => {
-            Ember.Logger.info('Removing notification from queue. Message: ' + notification.get('message'));
             this.messages.removeObject(notification);
         }, 200);
     },
