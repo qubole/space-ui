@@ -1,4 +1,3 @@
-import Ember from 'ember';
 import EmberObject from '@ember/object';
 import { isPresent } from '@ember/utils';
 import { later } from '@ember/runloop';
