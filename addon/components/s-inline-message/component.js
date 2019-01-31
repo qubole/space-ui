@@ -4,6 +4,7 @@ import layout from './template';
 export default Component.extend({
     layout,
     cssClasses: '',
+    classNames: ['fs12'],
     willRender() {
         switch (this.get('type')) {
             case 'error':

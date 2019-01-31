@@ -1,0 +1,13 @@
+& {
+    .steps-select-container {
+        li {
+            display: inline-block;
+        }
+
+        li:last-child {
+            hr {
+                display: none !important;
+            }
+        }
+    }
+}

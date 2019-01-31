@@ -13,8 +13,12 @@
                 {{yield}}
             </div>
             <div class="modal-footer">
-                {{#s-button actionName=(action cancelAction) className="btn-secondary float-left" data-dismiss="modal" }}{{cancelText}}{{/s-button}}
-                {{#s-button actionName=(action okAction) className="btn-primary float-left" data-dismiss="modal" }}{{okText}}{{/s-button}}
+                {{#if cancelAction }}
+                    {{#s-button actionName=(action cancelAction) className="btn-secondary float-left" data-dismiss="modal" }}{{cancelText}}{{/s-button}}
+                {{/if}}
+                {{#if okAction }}
+                    {{#s-button actionName=(action okAction) className="btn-primary float-left" data-dismiss="modal" }}{{okText}}{{/s-button}}
+                {{/if}}
             </div>
         </div>
     </div>

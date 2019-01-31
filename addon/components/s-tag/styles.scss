@@ -1,0 +1,13 @@
+&.container {
+    padding: 4px 12px;
+    color: $themePrimaryGrey;
+    text-align: center;
+    background: $q-sky;
+    border-radius: $radius5;
+}
+
+& {
+    .cross {
+        width: 11px;
+    }
+}
