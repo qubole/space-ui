@@ -1,8 +1,10 @@
-# space-ui
+# Space UI
 
-[Short description of the addon.]
+Ember components that implement Space design(With Bootstrap)
 
 ## Installation
+
+Space UI is available as ember add on
 
 ```
 ember install space-ui
@@ -10,20 +12,72 @@ ember install space-ui
 
 ## Usage
 
-[Longer description of how to use the addon in apps.]
+Here is a quick example to get you started,
 
-## Contributing
+```
+{{#s-button actionName=(action 'onSave') className="btn-primary float-right" }}
+    Hello World
+{{/s-button}}
+```
 
-### Installation
+# Components
+
+| Name           | Semantic         | Status    |
+| -------------- | ---------------- | --------- |
+| Notification   | s-notification   | Bhargavi  |
+| Timeline       | s-timeline       | Chandresh |
+| TreeSelect     | s-timeline       | Manzoor   |
+| Steps          | s-steps          | Manzoor   |
+| Button         | s-button         | Done      |
+| Icon           | s-icon           | Done      |
+| Inline Message | s-inline-message | Done      |
+| Text Input     | s-input          | Done      |
+| Label          | s-label          | Done      |
+| Loader         | s-loader         | Done      |
+| Modal          | s-modal          | Done      |
+| Radio          | s-radio          | Done      |
+| Select         | s-select         | Done      |
+| Checkbox       | s-checkbox       | Done      |
+| Tag            | s-tag            | Done      |
+| Small          | s-small          | Done      |
+| Table          | s-table          | Done      |
+| Text area      | s-textarea       | Done      |
+| Icon Holder    | s-icon-holder    | Done      |
+
+## Open Items
+
+- [ ] Bootstrap 3 Support
+- [ ] Documentation framework setup with Demo
+- [ ] Performance
+- [ ] Tests and CI
+- [ ] Advance Table
+- [ ] Auto Complete
+- [ ] Tooltip
+- [ ] DatePicker
+- [ ] Switch
+- [ ] Progressbar
+- [ ] Upload
+- [ ] Card
+- [ ] List
+- [ ] Popover
+- [ ] Tree
+- [ ] Tabs
+- [ ] Improve Select Component
+- [ ] Improve Radio Component
+- [ ] Improve Checkbox Component
+- [ ] Layout (https://ant.design/components/grid/)
+- [ ] Integrate jfrog for internal use
+- [ ] Remove bootstrap as base(not decided)
+- [x] Add On Setup with Bootstrap 4
+- [x] Move all components from Quest
+
+### For contribution
 
 - `git clone <repository-url>`
 - `cd space-ui`
 - `npm install`
-
-### Add on dev setup
-
-npm link - in space repo
-npm link space-ui - in your project repo
+- `npm link - in space repo`
+- `npm link space-ui - in your project repo`
 
 Follow this video to setup addon dev env
 https://www.youtube.com/watch?v=bhJ6YzBIoWo
