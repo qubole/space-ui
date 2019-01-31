@@ -1,5 +1,6 @@
 import { module, test } from 'qunit';
 import { setupTest } from 'ember-qunit';
+import { settled } from '@ember/test-helpers';
 
 module('service:notifications', 'Unit | Service | notifications', function(hooks){
     setupTest(hooks);
@@ -9,8 +10,7 @@ module('service:notifications', 'Unit | Service | notifications', function(hooks
         assert.ok(service);
     });
 
-    test('check non persistant info notification', function(assert){
-        let clock = sinon.useFakeTimers();
+    test('check non persistant info notification', async function(assert){
         let service = this.owner.lookup('service:notifications');
         service.info({
             message: 'Query cant be empty',
@@ -18,9 +18,8 @@ module('service:notifications', 'Unit | Service | notifications', function(hooks
             isCloseable: false
         });
         assert.equal(service.get('messages.length'), 1);
-        clock.tick(10200);
+        await settled();
         assert.equal(service.get('messages.length'), 0);
-        clock.restore();
     });
 
     test('check progress options', function(assert){

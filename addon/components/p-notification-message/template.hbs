@@ -5,7 +5,7 @@
     {{notification.message}}
 </div>
 {{#if notification.actions}}
-  {{#s-button className=(concat 'fs12 notification-action ' notification.typeClass) actionName=(action 'customAction' notification)}}
+  {{#s-button className=(concat 'fs12 notification-action ' notification.typeClass) actionName=(action 'customAction')}}
     {{notification.actions.title}}
   {{/s-button}}
 {{/if}}

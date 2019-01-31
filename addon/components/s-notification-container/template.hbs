@@ -4,7 +4,12 @@
   {{/if}}
   <div class="primary-notification {{if isFullView 'd-none'}}">
     {{#if notifications.firstObject}}
-        {{p-notification-message notification=notifications.firstObject slideIn=slideIn remove=(action 'remove')}}
+        {{p-notification-message
+          notification=notifications.firstObject
+          slideIn=slideIn
+          remove=(action 'remove')
+          secondaryAction=notifications.firstObject.actions.callback
+        }}
     {{/if}}
     {{#if isStacked}}
       <div class="show-more-footer" onclick={{action 'showAll'}}>See {{hiddenNotificationsLength}} more</div>
@@ -13,7 +18,13 @@
   {{#if isFullView}}
     <div class="secondary-notifications">
       {{#each notifications as |notification|}}
-        {{p-notification-message notification=notification direction="up" willBeDestory=willBeDestory remove=(action 'remove')}}
+        {{p-notification-message
+          notification=notification
+          direction="up"
+          willBeDestory=willBeDestory
+          remove=(action 'remove')
+          secondaryAction=notification.actions.callback
+        }}
       {{/each}}
     </div>
     {{#if isStacked}}

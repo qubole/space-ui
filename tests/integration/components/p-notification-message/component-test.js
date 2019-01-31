@@ -32,7 +32,8 @@ module('Integration | Component | p-notification-message', function(hooks) {
             })
         });
         this.set('notification', notification);
-        await render(hbs`{{p-notification-message notification=notification}}`);
+        await render(hbs`{{p-notification-message notification=notification \
+          secondaryAction=notification.actions.callback}}`);
         assert.equal(this.element.getElementsByClassName('close-notification').length, 1);
         assert.equal(this.element.getElementsByClassName('notification-icon').length, 0);
         assert.equal(this.element.querySelector('.notification-action').textContent.trim(), 'view');
@@ -62,7 +63,10 @@ module('Integration | Component | p-notification-message', function(hooks) {
             })
         });
         this.set('notification', notification);
-        await render(hbs`{{p-notification-message notification=notification}}`);
+        await render(hbs`{{p-notification-message \
+          notification=notification \
+          secondaryAction=notification.actions.callback\
+        }}`);
         assert.equal(this.element.getElementsByClassName('close-notification').length, 1);
         assert.equal(this.element.getElementsByClassName('notification-icon').length, 1);
         assert.equal(this.element.querySelector('.notification-action').textContent.trim(), 'view');

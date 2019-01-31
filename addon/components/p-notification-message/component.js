@@ -47,8 +47,8 @@ export default Component.extend({
         remove(notification){
             this.get('remove')(notification);
         },
-        customAction(notification){
-            notification.actions.callback();
+        customAction(){
+            this.get('secondaryAction')();
         }
     }
 });
