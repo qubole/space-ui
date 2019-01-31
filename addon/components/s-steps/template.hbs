@@ -1,0 +1,5 @@
+<ul class="steps-select-container">
+    {{#each steps as |s index|}}
+        {{step-selector actionName=s.action current=current name=s.name title=s.title number=(increment index) }}
+    {{/each}}
+</ul>
