@@ -32,7 +32,7 @@ module.exports = function (defaults) {
     });
 
 
-    app.import('node_modules/bootstrap/dist/js/bootstrap.min.js');
+    //app.import('node_modules/bootstrap/dist/js/bootstrap.min.js');
     // app.import('node_modules/bootstrap/dist/css/bootstrap.css');
     // app.import('bower_components/lodash/lodash.js');
 

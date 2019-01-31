@@ -1,26 +1,73 @@
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
-import { render } from '@ember/test-helpers';
+import { render, click } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
 
 module('Integration | Component | p-notification-message', function(hooks) {
-  setupRenderingTest(hooks);
+    setupRenderingTest(hooks);
 
-  test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
+    test('it renders', async function(assert) {
+        await render(hbs`{{p-notification-message direction='down'}}`);
+        assert.equal(this.element.getElementsByClassName('q-notifications slide-up').length, 1);
+    });
 
-    await render(hbs`{{s-modal}}`);
+    test('check shownotif class', async function(assert) {
+        await render(hbs`{{p-notification-message direction='left'}}`);
+        assert.equal(this.element.getElementsByClassName('q-notifications slide-in').length, 1);
+    });
 
-    assert.equal(this.element.textContent.trim(), '');
+    test('check notification with action', async function(assert){
+        let callbackSpy = sinon.spy();
+        let notification = Ember.Object.create({
+            typeClass: 'warning',
+            message: 'Query statement cant be empty',
+            icon: false,
+            isCloseable: true,
+            isPersistant: true,
+            actions: Ember.Object.create({
+                title: 'view',
+                callback: () => {
+                    callbackSpy();
+                }
+            })
+        });
+        this.set('notification', notification);
+        await render(hbs`{{p-notification-message notification=notification}}`);
+        assert.equal(this.element.getElementsByClassName('close-notification').length, 1);
+        assert.equal(this.element.getElementsByClassName('notification-icon').length, 0);
+        assert.equal(this.element.querySelector('.notification-action').textContent.trim(), 'view');
+        assert.equal(this.element.getElementsByClassName('notification-message col-sm-9').length, 1);
+        assert.equal(this.element.getElementsByClassName('query-progress').length, 0);
 
-    // Template block usage:
-    await render(hbs`
-      {{#p-notification-message}}
-        template block text
-      {{/p-notification-message}}
-    `);
+        await click('.notification-action');
+        assert.equal(callbackSpy.called, true);
+    });
 
-    assert.equal(this.element.textContent.trim(), 'template block text');
-  });
+    test('check progress notification with action and icon', async function(assert){
+        let callbackSpy = sinon.spy();
+        let notification = Ember.Object.create({
+            typeClass: 'progress',
+            message: 'Query statement cant be empty',
+            icon: true,
+            isCloseable: true,
+            isPersistant: true,
+            progress: Ember.Object.create({
+                percentage: 0
+            }),
+            actions: Ember.Object.create({
+                title: 'view',
+                callback: () => {
+                    callbackSpy();
+                }
+            })
+        });
+        this.set('notification', notification);
+        await render(hbs`{{p-notification-message notification=notification}}`);
+        assert.equal(this.element.getElementsByClassName('close-notification').length, 1);
+        assert.equal(this.element.getElementsByClassName('notification-icon').length, 1);
+        assert.equal(this.element.querySelector('.notification-action').textContent.trim(), 'view');
+        assert.equal(this.element.getElementsByClassName('notification-message col-sm-8').length, 1);
+        assert.equal(this.element.getElementsByClassName('query-progress').length, 1);
+        assert.equal(callbackSpy.called, false);
+    });
 });
