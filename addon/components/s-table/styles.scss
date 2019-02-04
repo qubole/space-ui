@@ -1,13 +1,12 @@
 & {
-    thead>tr {
-        background-color: $tableHeadColor;
-    }
+  thead>tr {
+    background-color: $tableHeadColor;
+  }
 
-    thead>tr>th {
-        border-bottom: none;
-        border-top: none;
-        color: $themeSubtitleColor;
-        font-weight: normal;
-        @extend .fs14
-    }
+  thead>tr>th {
+    border-bottom: none;
+    border-top: none;
+    color: $themeSubtitleColor;
+    font-weight: normal;
+  }
 }
