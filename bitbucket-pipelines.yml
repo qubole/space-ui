@@ -19,5 +19,5 @@ pipelines:
           - bower install --allow-root
           - ember build
           - mv dist/index.html dist/200.html
-          - surge dist --domain space.surge.sh 
+          - surge dist --domain spaceui.surge.sh
           - ember test          
