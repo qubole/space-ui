@@ -14,7 +14,10 @@ pipelines:
         script: # Modify the commands below to build your repository.
           - npm install -g ember-cli
           - npm install -g bower
+          - npm install -g surge
           - npm install
           - bower install --allow-root
           - ember build
-          - ember test
+          - mv dist/index.html dist/200.html
+          - surge dist --domain space.surge.sh 
+          - ember test          
