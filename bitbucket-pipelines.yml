@@ -17,3 +17,4 @@ pipelines:
           - npm install
           - bower install
           - ember build
+          - ember test
