@@ -15,6 +15,6 @@ pipelines:
           - npm install -g ember-cli
           - npm install -g bower
           - npm install
-          - bower install
+          #- bower install
           - ember build
           - ember test
