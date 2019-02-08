@@ -17,6 +17,11 @@ module.exports = function (defaults) {
             configPath: '.sass-lint.yml',
             shouldThrowExceptions: true,
             shouldLog: true
+        },
+        svgJar: {
+            sourceDirs: [
+                'public/assets/images/svgs'
+            ]
         }
     // svgJar: {
     //     sourceDirs: [
@@ -26,7 +31,10 @@ module.exports = function (defaults) {
     });
 
 
-    app.import('node_modules/bootstrap/dist/js/bootstrap.min.js');
+    if (!process.env.EMBER_ENV === 'test') {
+        app.import('node_modules/bootstrap/dist/js/bootstrap.min.js');
+    }
+
     // app.import('node_modules/bootstrap/dist/css/bootstrap.css');
     // app.import('bower_components/lodash/lodash.js');
 

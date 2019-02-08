@@ -1,0 +1,13 @@
+.s-table {
+  thead>tr {
+    background-color: $tableHeadColor;
+  }
+
+  thead>tr>th {
+    border-bottom: none;
+    border-top: none;
+    color: $themeSubtitleColor;
+    font-weight: normal;
+  }
+
+}

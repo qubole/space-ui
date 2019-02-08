@@ -1,0 +1,47 @@
+<div
+  class="modal fade show d-block"
+  id="exampleModal"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div
+    class="modal-dialog {{modelDialogClassNames}}"
+    role="document">
+    <div
+      class="modal-content p10">
+      {{#if header}}
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">{{header}}</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      {{/if}}
+      <div  class="modal-body">
+        {{yield}}
+      </div>
+      <div class="modal-footer">
+        {{#if cancelAction }}
+          {{#s-button
+            actionName=(action cancelAction)
+            className="btn-secondary float-left"
+            data-dismiss="modal"
+          }}
+            {{cancelText}}
+          {{/s-button}}
+        {{/if}}
+        {{#if okAction }}
+          {{#s-button
+            className="btn-primary float-left"
+            data-dismiss="modal"
+            actionName=(action okAction)
+          }}
+            {{okText}}
+          {{/s-button}}
+        {{/if}}
+        </div>
+    </div>
+  </div>
+</div>
+{{!-- {{yield}} --}}
+<div class="modal-backdrop fade show"></div>
