@@ -1,0 +1,20 @@
+.s-icon-holder {
+  .rounded-circle {
+    border: thin solid $qu-grey-disabled;
+    width: 4.8125rem;
+    height: 4.8125rem;
+    color: $qu-bluish-grey;
+  }
+
+  .name {
+    color: $themePrimaryGrey;
+    font-size: 0.875rem;
+  }
+}
+
+.s-icon-holder.active .rounded-circle {
+  background-color: $azure;
+  border: none;
+  color: $white;
+  box-shadow: 0 9px 10px 5px rgba(46, 46, 46, 0.06);
+}

@@ -1,1 +1,26 @@
+@mixin root-prop($prop: null, $value: null) {
+  @if ($prop and $value) {
+    #{$prop}: $value;
+  }
+}
 
+:root {
+  @include root-prop(--brand-primary, #19143c);
+  //   --brand-primary: #19143c;
+}
+
+$grey1: #dae1e7;
+
+table {
+  width: 100%;
+
+  th {
+    padding: 8px 10px;
+    background-color: $grey1;
+  }
+
+
+  td {
+    padding: 3px 10px;
+  }
+}

@@ -1,5 +1,0 @@
-<select onblur={{focus-out}} disabled={{disabled}} class="form-control" onchange={{action onChangeName value="target.value" }}>
-    {{#each options as |o|}}
-        <option value="{{o.value}}" selected={{eq value o.value}} disabled={{o.disable}}>{{o.name}}</option>
-    {{/each}}
-</select>

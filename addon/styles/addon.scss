@@ -1,5 +1,15 @@
-@import "pod-styles";
+// @import "pod-styles";
 @import "bootstrap/v4/bootstrap";
 @import "bootstrap/v4/bootstrap-grid";
 @import "bootstrap/v4/bootstrap-reboot.scss";
 @import "themes/default";
+@import "components/_s-button";
+@import "components/_s-icon-holder";
+@import "components/_s-inline-message";
+@import "components/_s-label";
+@import "components/_s-loader";
+@import "components/_s-table";
+@import "components/_s-tag";
+@import "components/_s-small";
+@import "components/_s-modal";
+
