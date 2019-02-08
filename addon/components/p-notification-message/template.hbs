@@ -1,7 +1,7 @@
 {{#if notification.icon}}
   {{s-icon name="clock" class=(concat "col-xs-1 mt5 fs25 removePadding notification-icon " notification.typeClass)}}
 {{/if}}
-<div class="notification-message {{getMessageClass}}" title={{notification.message}}>
+<div class="notification-message {{if (and action icon) 'col-sm-8' (if action 'col-sm-9' (if icon 'col-sm-10' 'col-sm-11'))}}" title={{notification.message}}>
     {{notification.message}}
 </div>
 {{#if notification.actions}}

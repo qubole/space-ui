@@ -11,19 +11,8 @@ export default Component.extend({
     showProgress: computed('notification.progress.percentage', function(){
         return isPresent(this.get('notification.progress.percentage'));
     }),
-    getMessageClass: computed('notification.{actions,icon}', function(){
-        let actions = this.get('notification.actions');
-        let icon = this.get('notification.icon');
-        if(actions && icon){
-            return 'col-sm-8';
-        }else if(actions){
-            return 'col-sm-9';
-        }else if(icon){
-            return 'col-sm-10';
-        }else{
-            return 'col-sm-11';
-        }
-    }),
+    action: computed.alias('notification.actions'),
+    icon: computed.alias('notification.icon'),
     showNotif: computed('notification.expired', 'direction', 'willBeDestory', 'slideIn', function() {
         if(this.get('notification.expired')){
             return 'slide-out';
