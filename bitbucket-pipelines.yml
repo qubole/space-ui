@@ -20,4 +20,4 @@ pipelines:
           - ember build
           - mv dist/index.html dist/200.html
           - surge dist --domain spaceui.surge.sh
-          - ember test          
+          - ember test --query=nolint
