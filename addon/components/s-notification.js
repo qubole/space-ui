@@ -1,31 +1,37 @@
 import Component from '@ember/component';
-import layout from './template';
-import { computed } from '@ember/object';
+import layout from '../templates/components/s-notification';
+
+import {
+    computed
+} from '@ember/object';
 import {
     inject as service
 } from '@ember/service';
-import { later } from '@ember/runloop';
+import {
+    later
+} from '@ember/runloop';
 
 export default Component.extend({
     layout,
-    notificationService: service('notifications'),
+    classNames: ['s-notification'],
+    notificationService: service('notification'),
     notifications: computed.alias('notificationService.messages'),
-    isStacked: computed('notifications.[]', function(){
+    isStacked: computed('notifications.[]', function () {
         return this.get('notifications.length') > 1;
     }),
     isFullView: false,
     slideIn: computed('isFullView', {
-        get(){
+        get() {
             return !this.get('isFullView');
         },
-        set(key, value){
+        set(key, value) {
             return value;
         }
     }),
-    hiddenNotificationsLength: computed('notifications.length', function(){
-        return this.get('notifications.length') - 1 ;
+    hiddenNotificationsLength: computed('notifications.length', function () {
+        return this.get('notifications.length') - 1;
     }),
-    didInsertElement(){
+    didInsertElement() {
         this.set('slideIn', true);
     },
 
@@ -33,10 +39,10 @@ export default Component.extend({
         remove(notification) {
             this.get('notificationService').removeNotification(notification);
         },
-        showAll(){
+        showAll() {
             this.set('isFullView', true);
         },
-        showLess(){
+        showLess() {
             this.set('willBeDestory', true);
             later(this, () => {
                 this.set('isFullView', false);
@@ -44,7 +50,7 @@ export default Component.extend({
                 this.set('willBeDestory', false);
             }, 200);
         },
-        clearAll(){
+        clearAll() {
             this.get('notificationService').clearAll();
         }
     }

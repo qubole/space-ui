@@ -1,8 +1,14 @@
 import EmberObject from '@ember/object';
-import { isPresent } from '@ember/utils';
-import { later } from '@ember/runloop';
+import {
+    isPresent
+} from '@ember/utils';
+import {
+    later
+} from '@ember/runloop';
 import Service from '@ember/service';
-import { A } from '@ember/array';
+import {
+    A
+} from '@ember/array';
 
 const notifObj = EmberObject.extend({
     typeClass: '',
@@ -17,7 +23,7 @@ const notifObj = EmberObject.extend({
 
 export default Service.extend({
     messages: A(),
-    pushMessage: function(options) {
+    pushMessage: function (options) {
         let notification = notifObj.create({
             typeClass: options.type,
             message: options.message,
@@ -28,7 +34,7 @@ export default Service.extend({
             progress: options.progress
         });
         this.messages.pushObject(notification);
-        if(!notification.get('isPersistant')){
+        if (!notification.get('isPersistant')) {
             later(this, () => {
                 this.removeNotification(notification);
                 notification.set('expired', true);
@@ -36,8 +42,8 @@ export default Service.extend({
         }
         return notification;
     },
-    removeNotification(notification){
-        if(!notification){
+    removeNotification(notification) {
+        if (!notification) {
             return;
         }
         notification.set('expired', true);
@@ -65,6 +71,7 @@ export default Service.extend({
         return this.pushMessage(options);
     },
     info(options) {
+        debugger;
         options.type = 'info';
         return this.pushMessage(options);
     },
@@ -72,7 +79,7 @@ export default Service.extend({
         options.type = 'success';
         return this.pushMessage(options);
     },
-    progress(options){
+    progress(options) {
         options.type = 'info';
         options.isPersistant = isPresent(options.isPersistant) ? options.isPersistant : true;
         options.isCloseable = isPresent(options.isCloseable) ? options.isCloseable : true;
