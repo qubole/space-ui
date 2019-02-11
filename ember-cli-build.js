@@ -24,15 +24,14 @@ module.exports = function (defaults) {
                 'public/assets/images/'
             ]
         }
-    // svgJar: {
-    //     sourceDirs: [
-    //         'public/assets/images/'
-    //     ]
-    // }
+
     });
 
 
-    //app.import('node_modules/bootstrap/dist/js/bootstrap.min.js');
+    if (!process.env.EMBER_ENV === 'test') {
+        app.import('node_modules/bootstrap/dist/js/bootstrap.min.js');
+    }
+
     // app.import('node_modules/bootstrap/dist/css/bootstrap.css');
     // app.import('bower_components/lodash/lodash.js');
 
