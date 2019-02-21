@@ -45,7 +45,7 @@ module('Integration | Component | p-notification-instance', function (hooks) {
     assert.equal(this.element.getElementsByClassName('close-notification').length, 1);
     assert.equal(this.element.getElementsByClassName('notification-icon').length, 0);
     assert.equal(this.element.querySelector('.notification-action').textContent.trim(), 'view');
-    assert.equal(this.element.getElementsByClassName('notification-message col-sm-9').length, 1);
+    assert.equal(this.element.getElementsByClassName('notification-message col-9').length, 1);
     assert.equal(this.element.getElementsByClassName('query-progress').length, 0);
 
     await click('.notification-action');
@@ -78,7 +78,7 @@ module('Integration | Component | p-notification-instance', function (hooks) {
     assert.equal(this.element.getElementsByClassName('close-notification').length, 1);
     assert.equal(this.element.getElementsByClassName('notification-icon').length, 1);
     assert.equal(this.element.querySelector('.notification-action').textContent.trim(), 'view');
-    assert.equal(this.element.getElementsByClassName('notification-message col-sm-8').length, 1);
+    assert.equal(this.element.getElementsByClassName('notification-message col-8').length, 1);
     assert.equal(this.element.getElementsByClassName('query-progress').length, 1);
     assert.equal(callbackSpy.called, false);
   });
