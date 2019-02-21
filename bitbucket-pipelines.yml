@@ -7,7 +7,7 @@ image: node:6.9.4
 
 pipelines:
  branches:
-   master:
+   default:
     - step:
         caches:
           - node
