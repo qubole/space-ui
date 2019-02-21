@@ -6,22 +6,21 @@
 image: node:6.9.4
 
 pipelines:
- branches:
-   default:
-    - step:
-        caches:
-          - node
-        script: # Modify the commands below to build your repository.
-          - npm install -g ember-cli
-          - npm install -g bower
-          - npm install -g surge
-          - npm install
-          - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-          - echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | tee /etc/apt/sources.list.d/google-chrome.list
-          - apt-get update
-          - apt-get -y install google-chrome-stable
-          - bower install --allow-root
-          - ember build
-          - mv dist/index.html dist/200.html
-          - surge dist --domain spaceui.surge.sh
-          - ember test --query=nolint
+  default:
+   - step:
+       caches:
+         - node
+       script: # Modify the commands below to build your repository.
+         - npm install -g ember-cli
+         - npm install -g bower
+         - npm install -g surge
+         - npm install
+         - wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
+         - echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | tee /etc/apt/sources.list.d/google-chrome.list
+         - apt-get update
+         - apt-get -y install google-chrome-stable
+         - bower install --allow-root
+         - ember build
+         - mv dist/index.html dist/200.html
+         - surge dist --domain spaceui.surge.sh
+         - ember test --query=nolint
