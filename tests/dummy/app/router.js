@@ -19,6 +19,8 @@ Router.map(function () {
         this.route('button');
         this.route('input');
         this.route('tag');
+        this.route('progress');
+        this.route('notification');
 
     /* Your docs routes go here */
     });

@@ -1,0 +1,7 @@
+.s-progress {
+  .progress {
+    flex: 1;
+    @include border-radius(3px);
+    height: 6px;
+  }
+}
