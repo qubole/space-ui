@@ -20,14 +20,11 @@ module.exports = function (defaults) {
         },
         svgJar: {
             sourceDirs: [
-                'public/assets/images/svgs'
+                'node_modules/feather-icons/dist/icons',
+                'public/assets/images/'
             ]
         }
-    // svgJar: {
-    //     sourceDirs: [
-    //         'public/assets/images/'
-    //     ]
-    // }
+
     });
 
 

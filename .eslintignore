@@ -5,7 +5,7 @@
 # compiled output
 /dist/
 /tmp/
-
+/tests/
 # dependencies
 /bower_components/
 /node_modules/
