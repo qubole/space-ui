@@ -1,16 +1,16 @@
-# Input
+# Textarea
 
-<p>To get user input as a text field</p>
+<p>To get user input as multiple line</p>
 
 {{#docs-demo as |demo|}}
-{{#demo.example name='demo-input-basic.hbs'}}
+{{#demo.example name='demo-textarea-basic.hbs'}}
 
-{{s-input type='text' placeholder='Tell me your name' value=userInputForInput}}
+    {{s-textarea type='text' placeholder='Add your description' value=userInputForTextArea}}
 
 {{/demo.example}}
 
-<p class="pl15"> My name is: **{{userInputForInput}}** </p>
-{{demo.snippet 'demo-input-basic.hbs'}}
+<p class="pl15"> Description: **{{userInputForTextArea}}** </p>
+{{demo.snippet 'demo-textarea-basic.hbs'}}
 
 {{/docs-demo}}
 
@@ -19,6 +19,6 @@
 | value       | input value                    | String  | ""      |
 | placeholder | Place holder text              | String  | ""      |
 | disabled    | Whether the input is disabled. | boolean | false   |
-| readonly    | Whether the input is readonly. | boolean | false   |
 | cssClasses   | Custom class name              | String  | ""      |
-| focus-in    | on blur event                  | event   | null    |
+| focus-out    | on blur event                  | event   | null    |
+| rows   | native row attribute of text area    | number   |     |

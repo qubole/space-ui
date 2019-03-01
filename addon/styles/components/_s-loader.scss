@@ -3,8 +3,8 @@
   .s-circle,
   .s-circle:after {
     border-radius: 50%;
-    width: 5em;
-    height: 5em;
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
   .s-circle {
@@ -12,9 +12,9 @@
     font-size: 15px;
     position: relative;
     text-indent: -9999em;
-    border-top: 0.5em solid rgba(255, 255, 255, 0.2);
-    border-right: 0.5em solid rgba(255, 255, 255, 0.2);
-    border-bottom: 0.5em solid rgba(255, 255, 255, 0.2);
+    border-top: 0.5em solid $themeFourthGrey;
+    border-right: 0.5em solid $themeFourthGrey;
+    border-bottom: 0.5em solid $themeFourthGrey;
     border-left: 0.5em solid $themePrimaryColor;
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);

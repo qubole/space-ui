@@ -5,7 +5,7 @@
 {{#docs-demo as |demo|}}
 {{#demo.example name='demo-notification-basic.hbs'}}
 
-{{#s-button actionName=(action "showNotification") color="primary"}}
+{{#s-button onClick=(action "showNotification") color="primary"}}
 Click Me
 {{/s-button}}
 
