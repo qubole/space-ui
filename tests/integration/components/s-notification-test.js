@@ -76,7 +76,6 @@ module('Integration | Component | s-notification', function (hooks) {
   });
 
   test('check clear all - in collapsed mode', async function (assert) {
-    //let clock = sinon.useFakeTimers();
     this.get('notificationService').warning({
       message: 'The command belongs to a differentAccount',
       icon: 'qi-tick',

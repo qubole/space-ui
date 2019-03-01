@@ -21,20 +21,22 @@
         {{yield}}
       </div>
       <div class="modal-footer">
-        {{#if cancelAction }}
+        {{#if onCancel }}
           {{#s-button
-            actionName=(action cancelAction)
-            className="btn-secondary float-left"
+            onClick=(action onCancel)
+            cssClasses="float-left"
+            color= "secondary"
             data-dismiss="modal"
           }}
             {{cancelText}}
           {{/s-button}}
         {{/if}}
-        {{#if okAction }}
+        {{#if onOK }}
           {{#s-button
-            className="btn-primary float-left"
+            color="primary"
+            cssClasses="float-left"
             data-dismiss="modal"
-            actionName=(action okAction)
+            onClick=(action onOK)
           }}
             {{okText}}
           {{/s-button}}

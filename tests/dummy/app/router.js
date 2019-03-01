@@ -18,9 +18,19 @@ Router.map(function () {
         //components
         this.route('button');
         this.route('input');
+        this.route('label');
         this.route('tag');
+        this.route('icon');
+        this.route('loader');
+        this.route('radio');
+        this.route('modal');
+        this.route('select');
+        this.route('table');
+        this.route('textarea');
+        this.route('steps');
         this.route('progress');
         this.route('notification');
+        this.route('collapse');
 
     /* Your docs routes go here */
     });

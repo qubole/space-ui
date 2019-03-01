@@ -15,7 +15,7 @@ ember install space-ui
 Here is a quick example to get you started,
 
 ```
-{{#s-button actionName=(action 'onSave') className="btn-primary float-right" }}
+{{#s-button onClick=(action 'onSave') color="primary" cssClasses="float-right" }}
     Hello World
 {{/s-button}}
 ```

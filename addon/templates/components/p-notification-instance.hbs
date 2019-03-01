@@ -1,12 +1,12 @@
 {{#if notification.icon}}
-    {{s-icon name="clock" class=(concat "col-1 mt5 fs25 removePadding notification-icon " notification.typeClass)}}
+    {{s-icon name="clock" cssClasses=(concat "col-1 mt5 fs25 removePadding notification-icon " notification.typeClass)}}
 {{/if}}
 <div class="notification-message fs14 {{if (and action icon) 'col-8' (if action 'col-9' (if icon 'col-10' 'col-11'))}}"
     title={{notification.message}}>
     {{notification.message}}
 </div>
 {{#if notification.actions}}
-    {{#s-button className=(concat 'fs12 notification-action ' notification.typeClass) actionName=(action 'customAction')}}
+    {{#s-button cssClasses=(concat 'fs12 notification-action ' notification.typeClass) onClick=(action 'customAction')}}
         {{notification.actions.title}}
     {{/s-button}}
 {{/if}}
@@ -14,7 +14,7 @@
     {{s-progress class="col-8" cssClasses="query-progress" progress=notification.progress.percentage}}
 {{/if}}
 {{#if notification.isCloseable}}
-    {{#s-button className="fs21 close-notification" actionName=(action 'remove' notification)}}
+    {{#s-button cssClasses="fs21 close-notification" onClick=(action 'remove' notification)}}
         <span aria-hidden="true">&times;</span>
     {{/s-button}}
 {{/if}}

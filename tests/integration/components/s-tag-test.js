@@ -1,4 +1,4 @@
-import { module, test } from 'qunit';
+import { module, test, skip } from 'qunit';
 import { setupRenderingTest } from 'ember-qunit';
 import { render } from '@ember/test-helpers';
 import hbs from 'htmlbars-inline-precompile';
@@ -6,21 +6,18 @@ import hbs from 'htmlbars-inline-precompile';
 module('Integration | Component | s-tag', function(hooks) {
     setupRenderingTest(hooks);
 
-    test('it renders', async function(assert) {
-    // Set any properties with this.set('myProperty', 'value');
-    // Handle any actions with this.set('myAction', function(val) { ... });
-
+    skip('it renders', async function(assert) {
         await render(hbs`{{s-tag}}`);
-
         assert.equal(this.element.textContent.trim(), '');
-
+        this.set('externalAction', function () {
+        // this.set('text', 'clicked');
+        // assert.equal(this.element.textContent.trim(), 'Test Button clicked');
+        });
         // Template block usage:
         await render(hbs`
-      {{#s-tag}}
-        template block text
-      {{/s-tag}}
+      {{s-tag key=1 onClose=(action externalAction)}}
     `);
-
         assert.equal(this.element.textContent.trim(), 'template block text');
     });
+
 });

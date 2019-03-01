@@ -40,7 +40,6 @@ module('service:notification', 'Unit | Service | notification', function (hooks)
       actions: Ember.Object.create({
         title: 'View',
         action: () => {
-          sinon.spy();
         }
       })
     });

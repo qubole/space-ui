@@ -9,7 +9,7 @@
 # dependencies
 /bower_components/
 /node_modules/
-
+package-lock.json
 # misc
 /.sass-cache
 /connect.lock

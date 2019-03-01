@@ -1,0 +1,15 @@
+.c-panel {
+  width: 100%;
+
+  .head {
+    cursor: pointer;
+  }
+
+  .chevron {
+    width: 15px;
+  }
+
+  .title {
+    color: $themeTitlePrimaryColor;
+  }
+}
