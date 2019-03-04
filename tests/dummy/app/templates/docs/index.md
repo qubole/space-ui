@@ -1,8 +1,4 @@
 # Introduction
 
-<!-- {{esdoc-component count=2}}
-{{#esdoc-component as |api|}}
-{{api.count}}
-{{/esdoc-component}} -->
+Space ember components are reusable UI components(Button, ProgressBar, Modal etc) built using Space UX guidelines.
 
-Space addon, and it rocks!

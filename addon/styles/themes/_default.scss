@@ -87,3 +87,11 @@ $themeNotificationFooterBgColor:$azure-light;
 $themeNotifClearAllBorderColor: $qu-charcoal-grey;
 $themeNotifClearAllHoverBgColor: $whiteTwo;
 $themeNotifTopBorderColor: $grayShadeTwo;
+
+.form-control:focus {
+  color: $themePrimaryGrey;
+  background-color: $themePrimaryWhite;
+  border-color: $themePrimaryColor;
+  outline: 0;
+  box-shadow: 0 15px 24px -15px rgba(193, 193, 193, 0.98);
+}
