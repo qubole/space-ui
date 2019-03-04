@@ -16,7 +16,10 @@
 {{/if}}
 
 {{#if link}}
-  {{#link-to link class=(concat "btn fs12 " cssClasses size "btn-"color)}}
+  {{#link-to link class=(concat "btn fs12" " " cssClasses " " size " " "btn-"color)}}
+    {{#if icon}}
+      {{s-icon cssClasses="icon" name=icon}}
+    {{/if}}
     {{yield}}
   {{/link-to}}
 {{/if}}
