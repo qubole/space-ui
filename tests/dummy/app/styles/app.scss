@@ -34,3 +34,23 @@ svg {
 .red {
  color: red !important;
 }
+
+.jumbotron {
+  margin-top:100px;
+  background-color: transparent;
+  margin-bottom: 0px;
+  .brandLogo {
+    width: 400px;
+  }
+  .caption {
+    font-size: 30px;
+    font-weight: 300;
+  }
+}
+
+.container-doc {
+  background-image: url("/space-ui/assets/images/background.png");
+  background-repeat: no-repeat;
+  height: 100vh;
+  overflow-x: none;
+}

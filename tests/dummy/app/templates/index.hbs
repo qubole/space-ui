@@ -1,16 +1,37 @@
 {{docs-header}}
+<div class="container-doc">
+<div class="jumbotron">
+  <div class='text-center'>
+    {{s-icon name="space" cssClasses="brandLogo"}}
+    <div class="caption mt10">Qubole Design System</div>
+  </div>
 
-{{docs-hero
-  prefix='Ember'
+
+
+{{!-- {{docs-hero
+  prefix='https://space-doc.firebaseapp.com/_media/logo.png'
   heading='Space UI'
-  byline='Qubole Design System'}}
+  byline='Qubole Design System'}} --}}
+</div>
 
-<div class='row mt20'>
+<div class='row'>
   <div class="col-4"></div>
-  <div class='col-4'>
+  <div class='col-4 text-center'>
     Building Standards in Color Palettes, Typographic Scales,
-    Grid Definition, Icons and Assets and also maintaining UI Patterns Templates, Modules, Components and Elements in the
+    Grid Definition, Icons and Assets and also maintaining UI Patterns Templates, Modules, Components and Elements in
+    the
     Product.
+    <div class="row mt20">
+      <div class="col-12 text-center mt20">
+        {{#link-to
+                  'docs'
+                  class='docs-bg-grey-darkest hover:docs-bg-black docs-text-white docs-py-2 docs-px-4 docs-no-underline docs-rounded'
+                }}
+          Read the docs →
+        {{/link-to}}
+      </div>
+    </div>
   </div>
   <div class="col-4"></div>
+</div>
 </div>
