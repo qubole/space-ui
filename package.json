@@ -67,6 +67,7 @@
     "ember-source": "~3.5.1",
     "ember-source-channel-url": "^1.1.0",
     "ember-svg-jar": "^1.2.1",
+    "ember-test-selectors": "^3.0.0-beta.1",
     "ember-try": "^1.0.0",
     "esdoc": "^1.1.0",
     "esdoc-standard-plugin": "^1.0.0",

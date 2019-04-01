@@ -3,5 +3,6 @@ import layout from '../templates/components/s-input';
 
 export default Component.extend({
     layout,
-    tagName: ''
+    tagName: '',
+    supportsDataTestProperties: true
 });

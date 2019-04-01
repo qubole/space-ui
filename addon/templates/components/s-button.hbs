@@ -3,6 +3,7 @@
     class="btn btn-{{color}} {{cssClasses}} {{size}}"
     disabled={{or disabled isLoading}}
     {{action onClick}}
+    data-test-id={{data-test-id}}
   >
     {{#if isLoading}}
       {{s-icon cssClasses="icon" name="ovalloader"}}
@@ -16,7 +17,7 @@
 {{/if}}
 
 {{#if link}}
-  {{#link-to link class=(concat "btn fs12" " " cssClasses " " size " " "btn-"color)}}
+  {{#link-to link class=(concat "btn fs12" " " cssClasses " " size " " "btn-"color) data-test-id=data-test-id}}
     {{#if icon}}
       {{s-icon cssClasses="icon" name=icon}}
     {{/if}}
