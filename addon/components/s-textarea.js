@@ -3,5 +3,6 @@ import layout from '../templates/components/s-textarea';
 
 export default Component.extend({
     layout,
-    tagName: ''
+    tagName: '',
+    supportsDataTestProperties: true
 });

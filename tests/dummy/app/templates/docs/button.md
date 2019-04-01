@@ -7,6 +7,7 @@
 
 
 {{#s-button
+  data-test-id="1"
   onClick=(action "buttonClick")
   color="primary"}}
     Click Me
@@ -24,6 +25,7 @@
 {{#demo.example name='demo-button-loading.hbs'}}
 
 {{#s-button
+  data-test-id="2"
   onClick=(action "toggleLoading")
   color="primary"
   isLoading=isLoading }}

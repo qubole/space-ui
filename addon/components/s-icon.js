@@ -4,5 +4,6 @@ import SpreadMixin from '../mixins/spread';
 
 export default Component.extend(SpreadMixin, {
     layout,
-    tagName: ''
+    tagName: '',
+    supportsDataTestProperties: true
 });

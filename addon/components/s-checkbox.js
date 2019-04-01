@@ -8,6 +8,7 @@ Checkbox.reopen({
 export default Component.extend({
     layout,
     tagName: '',
+    supportsDataTestProperties: true,
     checked: false,
     actions: {
         onCheck() {
