@@ -20,7 +20,7 @@ pipelines:
          - apt-get update
          - apt-get -y install google-chrome-stable
          - bower install --allow-root
-         - ember build
+         - ember build --production
          - mv dist/index.html dist/200.html
          - surge dist --domain spaceui.surge.sh
          - ember test --query=nolint
