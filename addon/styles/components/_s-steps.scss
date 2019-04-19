@@ -1,0 +1,10 @@
+@import "components/_s-step";
+
+.steps-container {
+    display: inline-block;
+    div:last-child {
+        hr {
+            display: none !important;
+        }
+    }
+}

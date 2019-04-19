@@ -1,0 +1,65 @@
+@import "themes/default";
+
+.s-step {
+    .content {
+        cursor: pointer;
+    }
+    .round-status {
+        border: none;
+        border-radius: 50%;
+        display: inline-block;
+        height: 24px;
+        width: 24px;
+        color: $themeSecondaryWhite;
+        background-color: $themeTertiaryColor;
+        box-shadow: 0 0 12px 0 rgba(204, 203, 203, 0.5);
+
+        .icon {
+            width: 12px;
+        }
+
+        .number {
+            display: none;
+        }
+    }
+
+    .title {
+        color: $themeTitlePrimaryColor;
+        font-size: 14px;
+        margin: 10px;
+    }
+
+
+    .separator {
+        border-top: thin solid $themeSubtitleColor;
+        border-radius: $radius5;
+        width: 20px;
+    } 
+
+    &.active {
+        ~* .content {
+            cursor: text;
+        }
+        .line {
+            border-radius: 15px 15px 0px 0;
+            border-bottom: 4px solid $themePrimaryColor;
+            width: 75%;
+        }
+
+        ~* .round-status {
+            background-color: $themePrimaryWhite;
+            box-shadow: none;
+            border: thin solid $themeBorderColor;
+            color: $themeTitlePrimaryColor;
+
+            .check {
+                display: none;
+            }
+
+            .number {
+                display: block;
+                font-size: 14px;
+            }
+        }
+    }
+}
