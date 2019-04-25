@@ -1,0 +1,5 @@
+{{#if data.content.component}}
+  {{yield (component data.content.component options=data.content.componentArgs)}}
+{{else}}
+  {{yield data.content}}
+{{/if}}
