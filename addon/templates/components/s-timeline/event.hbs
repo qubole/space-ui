@@ -1,0 +1,8 @@
+<div class={{cssClasses}}>
+  {{yield
+    (hash
+      datetime=(component "s-timeline/event/datetime" data=data cssClasses=cssClasses axisCssClasses=axisCssClasses)
+      content=(component "s-timeline/event/content" index=index data=data cssClasses=cssClasses toggleEvent=(action "toggleEvent"))
+    )
+  }}
+</div>

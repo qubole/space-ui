@@ -1,0 +1,8 @@
+@import "./content/title";
+@import "./content/body";
+
+.s-timeline-event-content {
+    padding: 0px 10px;
+    color: $themePrimaryGrey;
+    @extend .fs14;
+}

@@ -35,6 +35,10 @@ svg {
  color: red !important;
 }
 
+.hidden {
+  display: none;
+}
+
 .jumbotron {
   margin-top:100px;
   background-color: transparent;
@@ -53,4 +57,29 @@ svg {
   background-repeat: no-repeat;
   height: 100vh;
   overflow-x: none;
+}
+.hidden {
+  display: none;
+}
+
+/* Custom Timeline Styling Example */
+.custom-timeline {
+  .s-timeline-event {
+    .s-timeline-event-datetime {
+      .axis {
+        &.custom-data-active-state {
+          &::before {
+            background: #DF3D11;
+          }
+        }
+      }
+
+      .custom-data-active-state {
+        &::after {
+          border-color: #DF3D11;
+          background-color: #DF3D11;
+        }
+      }
+    }
+  }
 }

@@ -1,0 +1,8 @@
+.s-timeline-event-content-body {
+    position: relative;
+    display: none;
+
+    &.open {
+        display: block;
+    }
+}

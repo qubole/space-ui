@@ -1,0 +1,30 @@
+@import "./event/datetime";
+@import "./event/content";
+
+.s-timeline-event {
+    display: flex;
+    position: relative;
+
+    & > div {
+      display: flex;
+      width: 100%;
+
+      .s-timeline-event-datetime {
+        flex: 0 1 20%;
+      }
+
+      .s-timeline-event-content {
+        flex: 1 1 auto;
+      }
+    }
+
+    &:last-child {
+      .s-timeline-event-datetime {
+        .axis {
+          &:before {
+            background: transparent !important;
+          }
+        }
+      }
+    }
+}

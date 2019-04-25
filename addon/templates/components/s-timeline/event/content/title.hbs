@@ -1,0 +1,7 @@
+<div {{action "toggleEvent" index}}>
+  {{#if data.title.component}}
+    {{yield (component data.title.component options=data.title.componentArgs)}}
+  {{else}}
+    {{yield data.title}}
+  {{/if}}
+</div>

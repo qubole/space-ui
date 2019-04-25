@@ -1,0 +1,7 @@
+<div class={{cssClasses}}>
+  {{yield
+    (hash
+      title=(component "s-timeline/event/content/title" data=data index=index toggleEvent=(action "toggleEvent"))
+      body=(component "s-timeline/event/content/body" data=data open=data.open))
+  }}
+</div>

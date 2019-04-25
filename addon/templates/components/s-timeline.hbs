@@ -1,0 +1,14 @@
+<div class={{cssClasses}}>
+  {{#each events as |data index|}}
+    {{#s-timeline/event
+      ascending=ascending
+      index=index
+      data=data
+      cssClasses=data.status
+      toggleEvent=(action "toggleEvent")
+    as |event|
+    }}
+      {{yield event}}
+    {{/s-timeline/event}}
+  {{/each}}
+</div>
