@@ -77,8 +77,7 @@
     "eslint-plugin-node": "^7.0.1",
     "feather-icons": "4.7.3",
     "loader.js": "^4.7.0",
-    "qunit-dom": "^0.8.0",
-    "virtual-each": "^0.6.2"
+    "qunit-dom": "^0.8.0"
   },
   "engines": {
     "node": "6.* || 8.* || >= 10.*"
