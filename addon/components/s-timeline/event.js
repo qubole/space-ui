@@ -12,8 +12,9 @@ export default Component.extend({
     _updateState() {
         if (!this.get('ascending')) {
             if (this.element.nextSibling) {
-                const firstChild = this.element.nextSibling.firstChild;
-                this.set('axisCssClasses', firstChild.getAttribute('class'));
+                const sibiling = this.element.nextSibling;
+                const axisCssClasses = sibiling.getAttribute('class').replace('s-timeline-event ember-view', '').trim();
+                this.set('axisCssClasses', axisCssClasses);
             }
         }
     },
