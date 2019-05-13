@@ -2,20 +2,16 @@
 @import "./event/content";
 
 .s-timeline-event {
-    display: flex;
+    display: table-row;
     position: relative;
 
-    & > div {
-      display: flex;
-      width: 100%;
+    .s-timeline-event-datetime {
+      display: table-cell;
+      white-space: nowrap;
+    }
 
-      .s-timeline-event-datetime {
-        flex: 0 1 20%;
-      }
-
-      .s-timeline-event-content {
-        flex: 1 1 auto;
-      }
+    .s-timeline-event-content {
+      display: table-cell;
     }
 
     &:last-child {
