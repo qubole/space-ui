@@ -44,11 +44,11 @@
 | Property   | Description                                                                  | Type    | Default |
 | ---------- | ---------------------------------------------------------------------------- | ------- | ------- |
 | color      | theme - primary/secondary                                                    | String  | ""      |
-| isLoading  | show loader with disabled buttong                                            | boolean  | false  |
+| isLoading  | show loader with disabled button                                            | boolean  | false  |
 | size  | size of button  - small/large/default                                             | String  | default |
 | icon  | icon at left side                                                                 | String  | ""      |
 | link       | link where user should navigate. It will render anchor tag if this is passed | String  | ""      |
-| disabled   | Whether the input is disabled.                                               | boolean | false   |
+| disabled   | Whether the button is disabled.                                               | boolean | false   |
 | cssClasses  | Custom class name                                                            | String  | ""      |
-| onClick | onClick event                                                                   | event   | null    |
+| onClick (optional) | onClick event                                                                   | event   | null    |
 
