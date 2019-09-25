@@ -7,7 +7,10 @@
     "space-ui",
     "ui"
   ],
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qubole/space-ui.git"
+  },
   "license": "MIT",
   "author": "Manzoor Husain",
   "directories": {
