@@ -1,0 +1,1 @@
+{"jsonapi":{"version":"1.0"},"data":{"type":"project","id":"space-ui","attributes":{"name":"space-ui","version":"0.0.10","navigationIndex":[]},"relationships":{"modules":{"data":[]}}}}
