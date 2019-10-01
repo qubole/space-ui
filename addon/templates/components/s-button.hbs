@@ -6,7 +6,7 @@
     {{yield}}
   {{/link-to}}
 {{else}}
-  <button class="btn btn-{{color}} {{cssClasses}} {{size}}" disabled={{or disabled isLoading}} {{action 'handleClick'}}
+  <button class="btn btn-{{color}} {{cssClasses}} {{size}}" disabled={{or disabled isLoading}} title={{title}}
     {{action 'onMouseEnter' on='mouseEnter'}} {{action 'onMouseLeave' on='mouseLeave'}} data-test-id={{data-test-id}}>
     {{#if isLoading}}
       {{s-icon cssClasses="icon" name="ovalloader"}}

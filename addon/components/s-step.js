@@ -14,17 +14,17 @@ export default Component.extend({
   }),
   iconName: computed('isActive', function () {
     if(this.get('isActive') === 'active') {
-      return 'edit-2';  
+      return 'edit-2';
     }
     else {
       return 'check';
     }
-  }),  
+  }),
   actions: {
     callback() {
-      if((this.get('key') < this.get('current')) && this.get('onClick')) {
+      if((this.get('key') !== this.get('current')) && this.get('onClick')) {
           this.get('onClick')();
       }
-    } 
+    }
   }
 });

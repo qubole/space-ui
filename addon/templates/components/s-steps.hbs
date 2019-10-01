@@ -1,6 +1,6 @@
-<div class="d-flex steps-container">
-    {{yield 
-        (hash 
+<div class="d-flex steps-container {{cssClasses}}">
+    {{yield
+        (hash
         step=(component 's-step' current=current)
         )
     }}
