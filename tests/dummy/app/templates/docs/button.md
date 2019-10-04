@@ -13,6 +13,14 @@
     Click Me
 {{/s-button}}
 
+<p>You can also pass an action directly</p>
+{{#s-button
+  data-test-id="1"
+  action="buttonClick"
+  color="primary"}}
+    Click Me
+{{/s-button}}
+
 {{/demo.example}}
 <p class="pl15">{{buttonPressed}}</p>
 
@@ -51,4 +59,5 @@
 | disabled   | Whether the button is disabled.                                               | boolean | false   |
 | cssClasses  | Custom class name                                                            | String  | ""      |
 | onClick (optional) | onClick event                                                                   | event   | null    |
+| action (optional) | action to trigger on click                                                                   | event   | null    |
 
