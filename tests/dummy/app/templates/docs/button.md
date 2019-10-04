@@ -12,21 +12,21 @@
   color="primary"}}
     Click Me
 {{/s-button}}
-
-<p>You can also pass an action directly</p>
-{{#s-button
-  data-test-id="1"
-  action="buttonClick"
-  color="primary"}}
-    Click Me
-{{/s-button}}
-
 {{/demo.example}}
-<p class="pl15">{{buttonPressed}}</p>
-
 {{demo.snippet 'demo-button-basic.hbs'}}
 {{/docs-demo}}
 
+<p class="pl15">{{buttonPressed}}</p>
+
+<p>You can also pass an action directly</p>
+{{#docs-snippet name='button-with-action.hbs' unindent=true language='handlebars'}}
+  {{#s-button
+    data-test-id="2"
+    action="buttonClick"
+    color="primary"}}
+      Click Me
+  {{/s-button}}
+{{/docs-snippet}}
 
 {{#docs-demo as |demo|}}
 
