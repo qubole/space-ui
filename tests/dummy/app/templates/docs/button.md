@@ -60,4 +60,6 @@
 | cssClasses  | Custom class name                                                            | String  | ""      |
 | onClick (optional) | onClick event                                                                   | event   | null    |
 | action (optional) | action to trigger on click                                                                   | event   | null    |
+| onMouseEnter (optional) | action to trigger on mouse enter of component                                                                   | event   | null    |
+| onMouseLeave (optional) | action to trigger on mouse leave of component                                                                   | event   | null    |
 
