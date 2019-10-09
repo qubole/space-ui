@@ -22,7 +22,7 @@ export default Component.extend({
   }),
   actions: {
     callback() {
-      if((this.get('key') !== this.get('current')) && this.get('onClick')) {
+      if(this.get('onClick')) {
           this.get('onClick')();
       }
     }
