@@ -52,6 +52,7 @@
 | Property   | Description                                                                  | Type    | Default |
 | ---------- | ---------------------------------------------------------------------------- | ------- | ------- |
 | color      | theme - primary/secondary                                                    | String  | ""      |
+| id      | ID of the button                                                    | String  | ""      |
 | isLoading  | show loader with disabled button                                            | boolean  | false  |
 | size  | size of button  - small/large/default                                             | String  | default |
 | icon  | icon at left side                                                                 | String  | ""      |
