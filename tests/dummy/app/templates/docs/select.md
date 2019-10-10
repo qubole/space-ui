@@ -3,13 +3,13 @@
 <p>To Select single value from dropdown</p>
 
 {{#docs-demo as |demo|}}
-{{#demo.example name='demo-button-basic.hbs'}}
+{{#demo.example name='demo-select-basic.hbs'}}
 
 
 {{s-select options=selectOptions onChange=(action "onSelectOption") value=selected }}
 {{/demo.example}}
 <p class="pl15">Selected Option: {{selected}}</p>
-{{demo.snippet 'demo-button-basic.hbs'}}
+{{demo.snippet 'demo-select-basic.hbs'}}
 {{/docs-demo}}
 
 

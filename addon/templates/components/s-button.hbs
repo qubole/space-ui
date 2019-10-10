@@ -1,26 +1,19 @@
-{{#if onClick}}
-  <button
-    class="btn btn-{{color}} {{cssClasses}} {{size}}"
-    disabled={{or disabled isLoading}}
-    {{action onClick}}
-    data-test-id={{data-test-id}}
-  >
+{{#if link}}
+  {{#link-to link id=id class=(concat "btn fs12" " " cssClasses " " size " " "btn-"color) data-test-id=data-test-id}}
+    {{#if icon}}
+      {{s-icon cssClasses="icon" name=icon}}
+    {{/if}}
+    {{yield}}
+  {{/link-to}}
+{{else}}
+  <button type="button" class="btn btn-{{color}} {{cssClasses}} {{size}}" id={{id}} disabled={{or disabled isLoading}} title={{title}}
+    {{action 'onMouseEnter' on='mouseEnter'}} {{action 'onMouseLeave' on='mouseLeave'}} data-test-id={{data-test-id}}>
     {{#if isLoading}}
       {{s-icon cssClasses="icon" name="ovalloader"}}
     {{/if}}
     {{#if icon}}
       {{s-icon cssClasses="icon" name=icon}}
     {{/if}}
-
     {{yield}}
   </button>
-{{/if}}
-
-{{#if link}}
-  {{#link-to link class=(concat "btn fs12" " " cssClasses " " size " " "btn-"color) data-test-id=data-test-id}}
-    {{#if icon}}
-      {{s-icon cssClasses="icon" name=icon}}
-    {{/if}}
-    {{yield}}
-  {{/link-to}}
 {{/if}}

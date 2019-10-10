@@ -34,12 +34,9 @@
         border-top: thin solid $themeSubtitleColor;
         border-radius: $radius5;
         width: 20px;
-    } 
+    }
 
     &.active {
-        ~* .content {
-            cursor: text;
-        }
         .line {
             border-radius: 15px 15px 0px 0;
             border-bottom: 4px solid $themePrimaryColor;

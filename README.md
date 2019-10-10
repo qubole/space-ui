@@ -1,6 +1,6 @@
 # Space UI
 
-Ember components that implement Space design(With Bootstrap)
+Ember components that implement Space design (with Bootstrap)
 
 ## Installation
 
