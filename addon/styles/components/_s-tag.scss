@@ -11,3 +11,28 @@
     width: 12px;
   }
 }
+
+&.important{
+  background: $q-sky !important;
+  color: $themePrimaryGrey !important;
+  font-weight: bold;
+}
+
+&.success{
+  background: $themeSuccessBackground !important;
+  color: $themeSuccessTextColor !important;
+  font-weight: bold;
+}
+
+&.danger{
+  background: $themeDangerBackground !important;
+  color: $themeErrorTextColor !important;
+  font-weight: bold;
+}
+
+&.warning{
+  background: $themeWarningColor !important;
+  color: $themeWarningTextColor !important;
+  font-weight: bold;
+}
+
