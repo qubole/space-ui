@@ -13,26 +13,26 @@
 }
 
 &.important{
-  background: $q-sky !important;
-  color: $themePrimaryGrey !important;
+  background: $q-sky ;
+  color: $themePrimaryGrey ;
   font-weight: bold;
 }
 
 &.success{
-  background: $themeSuccessBackground !important;
-  color: $themeSuccessTextColor !important;
+  background: $themeSuccessBackground ;
+  color: $themeSuccessTextColor ;
   font-weight: bold;
 }
 
 &.danger{
-  background: $themeDangerBackground !important;
-  color: $themeErrorTextColor !important;
+  background: $themeDangerBackground ;
+  color: $themeErrorTextColor ;
   font-weight: bold;
 }
 
 &.warning{
-  background: $themeWarningColor !important;
-  color: $themeWarningTextColor !important;
+  background: $themeWarningColor ;
+  color: $themeWarningTextColor ;
   font-weight: bold;
 }
 
