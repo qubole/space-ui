@@ -17,3 +17,4 @@
 | -------- | ---------------------------------------- | ------ | ------- |
 | key      | to identify tag for operation like clear | String | null    |
 | onClose  | Clear tag                                | event  | null    |
+| type     | Add colours to tag - danger, important, warning, success | String | important|
