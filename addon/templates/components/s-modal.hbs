@@ -12,36 +12,40 @@
       {{#if header}}
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">{{header}}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
+          {{#if onCancel}}
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close" {{action onCancel}}>
+              <span aria-hidden="true">&times;</span>
+            </button>
+          {{/if}}
         </div>
       {{/if}}
       <div  class="modal-body">
         {{yield}}
       </div>
-      <div class="modal-footer">
-        {{#if onCancel }}
-          {{#s-button
-            onClick=(action onCancel)
-            cssClasses="float-left"
-            color= "secondary"
-            data-dismiss="modal"
-          }}
-            {{cancelText}}
-          {{/s-button}}
-        {{/if}}
-        {{#if onOK }}
-          {{#s-button
-            color="primary"
-            cssClasses="float-left"
-            data-dismiss="modal"
-            onClick=(action onOK)
-          }}
-            {{okText}}
-          {{/s-button}}
-        {{/if}}
+      {{#if actionPassed}}
+        <div class="modal-footer">
+          {{#if onCancel }}
+            {{#s-button
+              onClick=(action onCancel)
+              cssClasses="float-left"
+              color= "secondary"
+              data-dismiss="modal"
+            }}
+              {{cancelText}}
+            {{/s-button}}
+          {{/if}}
+          {{#if onOK }}
+            {{#s-button
+              color="primary"
+              cssClasses="float-left"
+              data-dismiss="modal"
+              onClick=(action onOK)
+            }}
+              {{okText}}
+            {{/s-button}}
+          {{/if}}
         </div>
+      {{/if}}
     </div>
   </div>
 </div>
