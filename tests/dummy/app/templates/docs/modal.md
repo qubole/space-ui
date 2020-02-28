@@ -19,7 +19,6 @@
             header="Modal Header"
             onOK=(action "onOk")
             okText="OK"
-            onCancel=(action "toggleModal")
             cancelText="Close"
             }}
                 {{pressed}}
@@ -36,6 +35,6 @@
 | header   | Modal header                             | String | ""    |
 | onOK  | action callback on ok click                | event  | null    |
 | okText  |Ok button text                | String  | ""    |
-| onCancel  | action callback on ok cancel               | event  | null    |
+| onCancelAction  | action callback on ok cancel               | event  | null    |
 | cancelText  | Cancel button text                       | event  | null    |
 | modelDialogClassNames  | css Class on container         | String  | ""    |
