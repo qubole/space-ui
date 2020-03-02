@@ -1,47 +1,46 @@
 <div
-  data-test-id={{data-test-id}}
-  class="modal fade show d-block"
-  role="dialog"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
+        data-test-id={{data-test-id}}
+        class="modal fade {{if isVisible "show d-block"}}"
+        role="dialog"
+        style="{{unless isVisible "display:none;"}}"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
   <div
-    class="modal-dialog {{modelDialogClassNames}}"
-    role="document">
+          class="modal-dialog {{modelDialogClassNames}}"
+          role="document">
     <div
-      class="modal-content p10">
+            class="modal-content p10">
       {{#if header}}
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">{{header}}</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close" {{action onCancel}}>
+          <button type="button" {{action 'onCancelAction'}} class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
       {{/if}}
-      <div  class="modal-body">
+      <div class="modal-body">
         {{yield}}
       </div>
       <div class="modal-footer">
-        {{#if onCancel }}
-          {{#s-button
-            onClick=(action onCancel)
-            cssClasses="float-left"
-            color= "secondary"
-            data-dismiss="modal"
-          }}
-            {{cancelText}}
-          {{/s-button}}
-        {{/if}}
+        {{#s-button
+                onClick=(action 'onCancelAction')
+                cssClasses="float-left"
+                color= "secondary"
+                data-dismiss="modal"
+        }}
+          {{cancelText}}
+        {{/s-button}}
         {{#if onOK }}
           {{#s-button
-            color="primary"
-            cssClasses="float-left"
-            data-dismiss="modal"
-            onClick=(action onOK)
+                  color="primary"
+                  cssClasses="float-left"
+                  data-dismiss="modal"
+                  onClick=(action onOK)
           }}
             {{okText}}
           {{/s-button}}
         {{/if}}
-        </div>
+      </div>
     </div>
   </div>
 </div>
