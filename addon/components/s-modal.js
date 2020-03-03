@@ -7,12 +7,20 @@ import {
 export default Component.extend({
   layout,
   classNames: ['s-modal'],
+  isVisible: true,
   actionPassed: computed('onCancel', 'onOK', function(){
-    if(this.get('onCancel') || this.get('onOK')){
+    if (this.get('onCancel') || this.get('onOK')) {
       return true;
     }
     return false;
-  })
-
+  }),
+  actions: {
+    onCancelAction() {
+      this.set('isVisible', false);
+      if (this.get('onCancel')) {
+        this.get('onCancel')();
+      }
+    }
+  }
 
 });
