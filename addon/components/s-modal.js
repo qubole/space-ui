@@ -8,7 +8,7 @@ export default Component.extend({
   layout,
   classNames: ['s-modal'],
   isVisible: true,
-  actionPassed: computed('onCancel', 'onOK', function(){
+  showFooter: computed('onCancel', 'onOK', function(){
     if (this.get('onCancel') || this.get('onOK')) {
       return true;
     }
