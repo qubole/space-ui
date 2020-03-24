@@ -35,7 +35,7 @@
     "ember-cli-htmlbars": "^3.0.0",
     "ember-cli-htmlbars-inline-precompile": "^1.0.3",
     "ember-cli-sass": "^8.0.1",
-    "node-sass": "4.9.0"
+    "node-sass": "4.12.0"
   },
   "devDependencies": {
     "@ember-decorators/babel-transforms": "^2.1.2",
@@ -82,7 +82,7 @@
     "qunit-dom": "^0.8.0"
   },
   "engines": {
-    "node": "6.* || 8.* || >= 10.*"
+    "node": "6.* || 8.* || >= 12.16.*"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"
