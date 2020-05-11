@@ -1,0 +1,9 @@
+<p>
+  {{s-icon name=alertIcon cssClasses='alert-icon'}}
+  {{yield}}
+  {{#if dismissable}}
+    <button type="button" class="close" {{action "dismissAlert"}}>
+        {{s-icon name='x-circle'}}
+    </button>
+  {{/if}}
+</p>
