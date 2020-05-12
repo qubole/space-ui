@@ -33,6 +33,7 @@ Router.map(function () {
         this.route('collapse');
         this.route('checkbox');
         this.route('timeline');
+        this.route('alerts');
 
 
   /* Your docs routes go here */
